@@ -3,7 +3,7 @@ const captainModel = require('../models/captain.model');
 
 module.exports.getAddressCoordinate = async (address) => {
     const apiKey = process.env.GOOGLE_MAPS_API;
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key = AIzaSyBU74GvLg49UCjaw8B1aBYUHqNuh9yeotM`;
 
     try {
         const response = await axios.get(url);
@@ -29,7 +29,7 @@ module.exports.getDistanceTime = async (origin, destination) => {
 
     const apiKey = process.env.GOOGLE_MAPS_API;
 
-    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeURIComponent(origin)}&destinations=${encodeURIComponent(destination)}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeURIComponent(origin)}&destinations=${encodeURIComponent(destination)}&key=AIzaSyBU74GvLg49UCjaw8B1aBYUHqNuh9yeotM`;
 
     try {
 
@@ -58,7 +58,7 @@ module.exports.getAutoCompleteSuggestions = async (input) => {
     }
 
     const apiKey = process.env.GOOGLE_MAPS_API;
-    const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(input)}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(input)}&key=AIzaSyBU74GvLg49UCjaw8B1aBYUHqNuh9yeotM`;
 
     try {
         const response = await axios.get(url);
